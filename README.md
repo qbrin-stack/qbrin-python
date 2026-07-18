@@ -16,11 +16,11 @@ Your agent is about to act. Is the thing it believes actually true in *your* sys
 qbrin sits between AI agents and an organisation's own sources (Postgres, Slack, Gmail, Drive, GitHub, uploads) and answers one question extremely well: **is this claim supported by the connected sources — yes, no, or not enough evidence?** Every verified answer carries a citation behind every sentence. When the evidence isn't there, qbrin says so instead of guessing.
 
 ```
-pip install qbrin
+pip install git+https://github.com/qbrin-stack/qbrin-python   # PyPI release coming soon
 qbrin login          # sign in with Google — no token to copy
 ```
 
-`qbrin login` opens your browser, authenticates with Google, and writes a scoped token to `~/.qbrin/credentials`. After that, `Qbrin()` just works — no key in code.
+`qbrin login` opens your browser, authenticates with Google, and writes a scoped token to `~/.qbrin/credentials`. After that, `Qbrin()` just works — no key in code. *(A one-line `pip install qbrin` lands with the first PyPI release.)*
 
 ```python
 from qbrin import Qbrin
