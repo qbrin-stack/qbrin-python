@@ -6,8 +6,9 @@
   <img src="https://raw.githubusercontent.com/qbrin-stack/qbrin-python/main/docs/trust-flow.svg" alt="How the qbrin trust layer works: it sits between an AI agent and your own sources, cycling a payment agent, a biotech agent, and a security agent. In each, the agent asks, qbrin probes your live systems and knowledge, verifies every claim, and returns a decision back to the agent — REJECTED, VERIFIED, or NEED MORE EVIDENCE." width="100%">
 </p>
 
-![license MIT](https://img.shields.io/badge/license-MIT-3b5bfd)
+[![PyPI](https://img.shields.io/pypi/v/qbrin?color=3b5bfd&label=pypi)](https://pypi.org/project/qbrin/)
 ![python 3.9+](https://img.shields.io/badge/python-3.9%2B-3b5bfd)
+![license MIT](https://img.shields.io/badge/license-MIT-3b5bfd)
 ![verify: beta](https://img.shields.io/badge/verify-beta-9fd91f)
 ![zero deps](https://img.shields.io/badge/dependencies-0-18b6a6)
 
@@ -16,11 +17,11 @@ Your agent is about to act. Is the thing it believes actually true in *your* sys
 qbrin sits between AI agents and an organisation's own sources (Postgres, Slack, Gmail, Drive, GitHub, uploads) and answers one question extremely well: **is this claim supported by the connected sources — yes, no, or not enough evidence?** Every verified answer carries a citation behind every sentence. When the evidence isn't there, qbrin says so instead of guessing.
 
 ```
-pip install git+https://github.com/qbrin-stack/qbrin-python   # PyPI release coming soon
+pip install qbrin
 qbrin login          # sign in with Google — no token to copy
 ```
 
-`qbrin login` opens your browser, authenticates with Google, and writes a scoped token to `~/.qbrin/credentials`. After that, `Qbrin()` just works — no key in code. *(A one-line `pip install qbrin` lands with the first PyPI release.)*
+`qbrin login` opens your browser, authenticates with Google, and writes a scoped token to `~/.qbrin/credentials`. After that, `Qbrin()` just works — no key in code.
 
 ```python
 from qbrin import Qbrin
